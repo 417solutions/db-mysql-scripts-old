@@ -1,0 +1,8 @@
+<?php
+// INSERT USING SQL INJECTION PREVENTION:
+$sql1 = "INSERT INTO TABLE SET FIELD='".mysql_real_escape_string($value)."'";
+$rs1 = mysql_query($sql1);
+
+// IF WE WANT TO GET THE AUTO-GENERATED ID OF THE PREVIOUSLY INSERTED RECORD, WE CAN DO THIS:
+$newID = mysql_insert_id();
+?>
