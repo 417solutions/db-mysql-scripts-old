@@ -1,0 +1,5 @@
+<?php
+// URGENT: Always use a conditional WHERE clause when doing an update, otherwise you will wipe out your DB
+$sql1 = "UPDATE TABLE SET FIELD='',FIELD='' WHERE FIELD=''";
+$rs1 = mysql_query($sql1);
+?>
