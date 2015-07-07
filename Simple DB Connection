@@ -1,0 +1,19 @@
+<?php
+// SET CONNECTION VARIABLES
+$hostname="localhost";
+$username="USERNAME";
+$password="PASSWORD";
+$dbname="DATABASE_NAME";
+
+// CONNECT TO DATABASE
+$con = mysql_connect($hostname, $username, $password) or die("</pre><h1>Website Error!</h1><pre>");
+mysql_select_db($dbname);
+
+// Display the first ten results
+$sql1 = "SELECT FIELDS FROM TABLE WHERE CRITERIA ORDER BY FIELD FIELD LIMIT 0,10";
+$rs1 = mysql_query($sql1);
+$numRows = mysql_num_rows($rs1); // Get the number of results
+while($d = mysql_fetch_row($rs1)) {
+     print "$d[0], $d[1]"; // the number corresponds to the field order searched for (starting w/ 0)
+}
+?>
