@@ -1,0 +1,10 @@
+<?php
+// GET A SINGLE RESULT FROM A DATABASE
+$sql1 = "SELECT * FROM TABLE WHERE CRITERIA='SOMETHING'";
+$rs1 = mysql_query($sql1);
+if(mysql_num_rows($rs1)==1){ // IF THERE WERE ANY RECORDS
+    print mysql_result($rs1,0,"FIELD_NAME"); // 0 = the first record returned.
+}else{ // NO RECORDS FOUND
+    print "No Records Found!";
+}
+?>
